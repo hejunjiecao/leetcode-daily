@@ -4,11 +4,11 @@ int search(int* nums, int numsSize, int target) {
     while(left <= right)
     {
         int middle = left + (right - left) / 2;
-        if(nums[middle] > target)
+        if (nums[middle] > target)
             right = middle - 1;
-        if(nums[middle] < target)
+        if (nums[middle] < target)
             left = middle + 1;
-        if(nums[middle] == target)
+        if (nums[middle] == target)
             return middle;
     }
     return -1;
